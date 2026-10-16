@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Runtime logs & state
+*.log
+bridge.log
+
+# Local secrets (never commit)
+.env
+.env.*
+!.env.example
+
+# OS & editor files
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Build / test artifacts
+dist/
+coverage/
+*.tgz

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Replace /ABSOLUTE/PATH/TO/anthropic-gemini-bridge with your clone path, then:
+    cp examples/launchd/com.anthropic-gemini-bridge.plist ~/Library/LaunchAgents/
+    launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.anthropic-gemini-bridge.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.anthropic-gemini-bridge</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/ABSOLUTE/PATH/TO/anthropic-gemini-bridge/scripts/start.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>WorkingDirectory</key>
+    <string>/ABSOLUTE/PATH/TO/anthropic-gemini-bridge</string>
+    <key>StandardOutPath</key>
+    <string>/ABSOLUTE/PATH/TO/anthropic-gemini-bridge/bridge.log</string>
+    <key>StandardErrorPath</key>
+    <string>/ABSOLUTE/PATH/TO/anthropic-gemini-bridge/bridge.log</string>
+    <key>ProcessType</key>
+    <string>Background</string>
+</dict>
+</plist>

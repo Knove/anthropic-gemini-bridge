@@ -1,0 +1,5 @@
+#!/bin/bash
+# Launch Claude Code routed through the local anthropic-gemini-bridge.
+# Using --settings ensures this overrides any `env` block in ~/.claude/settings.json.
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+exec claude --settings "$ROOT_DIR/examples/claude-code/settings.json" "$@"

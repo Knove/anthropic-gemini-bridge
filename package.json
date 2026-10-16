@@ -1,0 +1,41 @@
+{
+  "name": "anthropic-gemini-bridge",
+  "version": "0.1.0",
+  "description": "Zero-dependency Anthropic Messages (/v1/messages + SSE) to Gemini generateContent protocol bridge with thought_signature round-trip preservation, JSON Schema allowlist sanitization, and adaptive thinking control.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server.ts"
+  },
+  "bin": {
+    "anthropic-gemini-bridge": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "scripts/",
+    "examples/",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "test": "node --test 'test/*.test.ts'"
+  },
+  "keywords": [
+    "anthropic",
+    "claude-code",
+    "gemini",
+    "opencode",
+    "protocol-bridge",
+    "llm-proxy",
+    "sse",
+    "thought-signature"
+  ]
+}
